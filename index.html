@@ -1,1 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>PunctiliousIT | Business Analysis & Decision Analysis</title>
+
+    <meta
+        name="description"
+        content="PunctiliousIT helps organizations understand complex business problems, make better decisions, and turn business needs into clear, workable requirements."
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2933;
+            background: #ffffff;
+            line-height: 1.65;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid #e5e7eb;
+            background: #ffffff;
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #1f2933;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 110px 0 100px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            line-height: 1;
+            letter-spacing: -0.05em;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #52606d;
+            max-width: 760px;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #1f2933;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            opacity: 0.88;
+        }
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .section-heading {
+            max-width: 750px;
+            margin-bottom: 45px;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+            letter-spacing: -0.035em;
+            margin-bottom: 20px;
+        }
+
+        .section-heading p,
+        .content p {
+            color: #52606d;
+            font-size: 1.08rem;
+        }
+
+        .content {
+            max-width: 800px;
+        }
+
+        .content p + p {
+            margin-top: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            padding: 30px;
+            border: 1px solid #dfe3e8;
+            border-radius: 6px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            color: #52606d;
+        }
+
+        .questions {
+            max-width: 800px;
+        }
+
+        .question {
+            padding: 18px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .tagline {
+            padding: 85px 20px;
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #52606d;
+            max-width: 650px;
+            margin: 0 auto 30px;
+            font-size: 1.08rem;
+        }
+
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 35px 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 760px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 75px 0;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">PunctiliousIT</div>
+
+            <ul>
+                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    Business Analysis & Decision Analysis
+                </div>
+
+                <h1>
+                    Better decisions.<br>
+                    Clearer requirements.<br>
+                    Stronger systems.
+                </h1>
+
+                <p>
+                    PunctiliousIT helps organizations understand complex
+                    business problems, make better decisions, and turn
+                    business needs into clear, workable requirements.
+                </p>
+
+                <a class="button" href="#services">
+                    See How I Can Help
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROBLEM -->
+
+    <section id="problem">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>The problem</h2>
+            </div>
+
+            <div class="content">
+
+                <p>
+                    Business problems are often treated as technology
+                    problems too quickly.
+                </p>
+
+                <p>
+                    A requirement is unclear. A process behaves differently
+                    than expected. Teams disagree about what should happen.
+                    Business rules become difficult to manage. A system
+                    produces results nobody fully understands. Important
+                    decisions depend on incomplete or inconsistent information.
+                </p>
+
+                <p>
+                    Adding more software does not necessarily solve these
+                    problems.
+                </p>
+
+                <p>
+                    Sometimes the first requirement is simply to understand
+                    what is actually happening.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>How PunctiliousIT can help</h2>
+
+                <p>
+                    Practical analysis focused on understanding the problem,
+                    clarifying the decision, and defining what the business
+                    actually needs.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Business Analysis</h3>
+
+                    <p>
+                        Clarify requirements, business rules, processes,
+                        constraints, dependencies and expected system
+                        behaviour.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Decision Analysis</h3>
+
+                    <p>
+                        Clarify the decision, available options, criteria,
+                        assumptions, constraints, risks, consequences and
+                        trade-offs.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Focused Analysis Services</h3>
+
+                    <p>
+                        Small, fixed-scope reviews of a particular requirement,
+                        decision, problem, business rule, process or system
+                        behaviour.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPROACH -->
+
+    <section id="approach">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>A different starting point</h2>
+
+                <p>
+                    PunctiliousIT does not begin by assuming that the requested
+                    feature, technology or proposed solution is the answer.
+                    The analysis starts underneath the request.
+                </p>
+
+            </div>
+
+
+            <div class="questions">
+
+                <div class="question">
+                    What problem are we actually solving?
+                </div>
+
+                <div class="question">
+                    What must be true?
+                </div>
+
+                <div class="question">
+                    What decisions need to be made?
+                </div>
+
+                <div class="question">
+                    What rules and constraints govern the situation?
+                </div>
+
+                <div class="question">
+                    What assumptions are we making?
+                </div>
+
+                <div class="question">
+                    What happens if we are wrong?
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="tagline">
+        The devil is in the details.
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container contact">
+
+            <h2>Bring one problem.</h2>
+
+            <p>
+                If you have a difficult requirement, business rule, system
+                behaviour, process or decision that needs to be understood,
+                start small.
+            </p>
+
+            <a class="button" href="mailto:punctiliousit@gmail.com">
+                Contact PunctiliousIT
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 PunctiliousIT
+    </div>
+
+</footer>
+
+</body>
+</html>
