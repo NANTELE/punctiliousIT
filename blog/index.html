@@ -1,364 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="PunctiliousIT blog — practical thinking on business analysis, requirements, decision-making, constraints, automation, and AI readiness."
-  />
-  <title>Blog | PunctiliousIT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --text: #1f2933;
-      --muted: #52606d;
-      --border: #e5e7eb;
-      --soft: #f8fafc;
-      --white: #ffffff;
-      --max-width: 1120px;
-    }
+    <title>PunctiliousIT | Business Analysis & Decision Analysis</title>
 
-    * {
-      box-sizing: border-box;
-    }
+    <meta
+        name="description"
+        content="PunctiliousIT helps organizations understand complex business problems, make better decisions, and turn business needs into clear, workable requirements."
+    >
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--white);
-      color: var(--text);
-      line-height: 1.65;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    a {
-      color: inherit;
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2933;
+            background: #ffffff;
+            line-height: 1.65;
+        }
 
-    .container {
-      width: min(calc(100% - 40px), var(--max-width));
-      margin: 0 auto;
-    }
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
 
-    header {
-      border-bottom: 1px solid var(--border);
-      background: var(--white);
-    }
+        header {
+            border-bottom: 1px solid #e5e7eb;
+            background: #ffffff;
+        }
 
-    .nav {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
+        nav {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
 
-    .brand {
-      text-decoration: none;
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      white-space: nowrap;
-    }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 24px;
-      font-size: 0.95rem;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
 
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-    }
+        nav a {
+            color: #1f2933;
+            text-decoration: none;
+        }
 
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"] {
-      color: var(--text);
-    }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    .hero {
-      padding: 92px 0 74px;
-      border-bottom: 1px solid var(--border);
-    }
+        .hero {
+            padding: 110px 0 100px;
+        }
 
-    .eyebrow {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
+        .hero-content {
+            max-width: 850px;
+        }
 
-    h1 {
-      max-width: 820px;
-      margin: 0;
-      font-size: clamp(2.6rem, 6vw, 5.2rem);
-      line-height: 1.03;
-      letter-spacing: -0.045em;
-    }
+        .eyebrow {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
 
-    .hero-copy {
-      max-width: 760px;
-      margin: 28px 0 0;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-    }
+        h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            line-height: 1;
+            letter-spacing: -0.05em;
+            margin-bottom: 30px;
+        }
 
-    main {
-      padding: 72px 0 100px;
-    }
+        .hero p {
+            font-size: 1.25rem;
+            color: #52606d;
+            max-width: 760px;
+            margin-bottom: 35px;
+        }
 
-    .section-heading {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 28px;
-    }
+        .button {
+            display: inline-block;
+            background: #1f2933;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
 
-    .section-heading h2 {
-      margin: 0;
-      font-size: 1.65rem;
-      letter-spacing: -0.025em;
-    }
+        .button:hover {
+            opacity: 0.88;
+        }
 
-    .section-heading p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #e5e7eb;
+        }
 
-    .article-list {
-      display: grid;
-      gap: 18px;
-    }
+        .section-heading {
+            max-width: 750px;
+            margin-bottom: 45px;
+        }
 
-    .article-card {
-      padding: 30px 30px 28px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--white);
-    }
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+            letter-spacing: -0.035em;
+            margin-bottom: 20px;
+        }
 
-    .article-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
-      margin-bottom: 12px;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
+        .section-heading p,
+        .content p {
+            color: #52606d;
+            font-size: 1.08rem;
+        }
 
-    .article-category {
-      font-weight: 700;
-      color: var(--text);
-    }
+        .content {
+            max-width: 800px;
+        }
 
-    .article-card h3 {
-      margin: 0;
-      font-size: clamp(1.35rem, 3vw, 1.8rem);
-      line-height: 1.2;
-      letter-spacing: -0.025em;
-    }
+        .content p + p {
+            margin-top: 20px;
+        }
 
-    .article-card p {
-      max-width: 790px;
-      margin: 14px 0 0;
-      color: var(--muted);
-    }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
 
-    .article-note {
-      display: inline-block;
-      margin-top: 20px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
+        .card {
+            padding: 30px;
+            border: 1px solid #dfe3e8;
+            border-radius: 6px;
+        }
 
-    .about-blog {
-      margin-top: 62px;
-      padding: 34px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--soft);
-    }
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+        }
 
-    .about-blog h2 {
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-      letter-spacing: -0.02em;
-    }
+        .card p {
+            color: #52606d;
+        }
 
-    .about-blog p {
-      max-width: 820px;
-      margin: 0;
-      color: var(--muted);
-    }
+        .questions {
+            max-width: 800px;
+        }
 
-    footer {
-      padding: 34px 0;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+        .question {
+            padding: 18px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
 
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
+        .tagline {
+            padding: 85px 20px;
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
 
-    .footer-row p {
-      margin: 0;
-    }
+        .contact {
+            text-align: center;
+        }
 
-    @media (max-width: 760px) {
-      .nav {
-        padding: 18px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
+        .contact p {
+            color: #52606d;
+            max-width: 650px;
+            margin: 0 auto 30px;
+            font-size: 1.08rem;
+        }
 
-      .nav-links {
-        justify-content: flex-start;
-        gap: 14px 20px;
-      }
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 35px 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
 
-      .hero {
-        padding: 62px 0 54px;
-      }
+        @media (max-width: 760px) {
 
-      main {
-        padding: 52px 0 72px;
-      }
+            nav ul {
+                display: none;
+            }
 
-      .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 6px;
-      }
+            .hero {
+                padding: 75px 0;
+            }
 
-      .article-card,
-      .about-blog {
-        padding: 24px;
-      }
-    }
-  </style>
+            section {
+                padding: 65px 0;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="../">PunctiliousIT</a>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="../#problem">The Problem</a>
-        <a href="../#services">Services</a>
-        <a href="../#approach">Approach</a>
-        <a href="./" aria-current="page">Blog</a>
-        <a href="../#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
+<header>
     <div class="container">
-      <p class="eyebrow">PunctiliousIT Blog</p>
-      <h1>Thinking carefully about how business systems actually work.</h1>
-      <p class="hero-copy">
-        Practical articles on business analysis, requirements, constraints,
-        decisions, automation, AI readiness, and the details that determine
-        whether a solution works in the real world.
-      </p>
-    </div>
-  </section>
+        <nav>
+            <div class="logo">PunctiliousIT</div>
 
-  <main>
+            <ul>
+                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    Business Analysis & Decision Analysis
+                </div>
+
+                <h1>
+                    Better decisions.<br>
+                    Clearer requirements.<br>
+                    Stronger systems.
+                </h1>
+
+                <p>
+                    PunctiliousIT helps organizations understand complex
+                    business problems, make better decisions, and turn
+                    business needs into clear, workable requirements.
+                </p>
+
+                <a class="button" href="#services">
+                    See How I Can Help
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROBLEM -->
+
+    <section id="problem">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>The problem</h2>
+            </div>
+
+            <div class="content">
+
+                <p>
+                    Business problems are often treated as technology
+                    problems too quickly.
+                </p>
+
+                <p>
+                    A requirement is unclear. A process behaves differently
+                    than expected. Teams disagree about what should happen.
+                    Business rules become difficult to manage. A system
+                    produces results nobody fully understands. Important
+                    decisions depend on incomplete or inconsistent information.
+                </p>
+
+                <p>
+                    Adding more software does not necessarily solve these
+                    problems.
+                </p>
+
+                <p>
+                    Sometimes the first requirement is simply to understand
+                    what is actually happening.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>How PunctiliousIT can help</h2>
+
+                <p>
+                    Practical analysis focused on understanding the problem,
+                    clarifying the decision, and defining what the business
+                    actually needs.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Business Analysis</h3>
+
+                    <p>
+                        Clarify requirements, business rules, processes,
+                        constraints, dependencies and expected system
+                        behaviour.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Decision Analysis</h3>
+
+                    <p>
+                        Clarify the decision, available options, criteria,
+                        assumptions, constraints, risks, consequences and
+                        trade-offs.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Focused Analysis Services</h3>
+
+                    <p>
+                        Small, fixed-scope reviews of a particular requirement,
+                        decision, problem, business rule, process or system
+                        behaviour.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPROACH -->
+
+    <section id="approach">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>A different starting point</h2>
+
+                <p>
+                    PunctiliousIT does not begin by assuming that the requested
+                    feature, technology or proposed solution is the answer.
+                    The analysis starts underneath the request.
+                </p>
+
+            </div>
+
+
+            <div class="questions">
+
+                <div class="question">
+                    What problem are we actually solving?
+                </div>
+
+                <div class="question">
+                    What must be true?
+                </div>
+
+                <div class="question">
+                    What decisions need to be made?
+                </div>
+
+                <div class="question">
+                    What rules and constraints govern the situation?
+                </div>
+
+                <div class="question">
+                    What assumptions are we making?
+                </div>
+
+                <div class="question">
+                    What happens if we are wrong?
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="tagline">
+        The devil is in the details.
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container contact">
+
+            <h2>Bring one problem.</h2>
+
+            <p>
+                If you have a difficult requirement, business rule, system
+                behaviour, process or decision that needs to be understood,
+                start small.
+            </p>
+
+            <a class="button" href="mailto:punctiliousit@gmail.com">
+                Contact PunctiliousIT
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
     <div class="container">
-      <div class="section-heading">
-        <h2>Articles</h2>
-        <p>Newest first</p>
-      </div>
-
-      <section class="article-list" aria-label="Blog articles">
-
-        <!--
-          These three cards establish the blog layout.
-          In Step 2 we can replace them with the exact articles from your Notion blog
-          and turn each title/card into a real link.
-        -->
-
-        <article class="article-card">
-          <div class="article-meta">
-            <span class="article-category">Business Analysis</span>
-            <span>Sample article card</span>
-          </div>
-          <h3>Constraint Thinking for Business Analysis</h3>
-          <p>
-            What changes when analysis begins by asking what must be true,
-            what cannot be violated, and what conditions govern the behaviour
-            of a business system?
-          </p>
-          <span class="article-note">Article page will be added in Step 2.</span>
-        </article>
-
-        <article class="article-card">
-          <div class="article-meta">
-            <span class="article-category">BusinessOps</span>
-            <span>Sample article card</span>
-          </div>
-          <h3>BusinessOps: Treating Business Analysis More Like Engineering</h3>
-          <p>
-            Exploring whether the business system expressed through requirements,
-            rules, decisions, states, and interactions can be represented with
-            greater precision and continuity.
-          </p>
-          <span class="article-note">Article page will be added in Step 2.</span>
-        </article>
-
-        <article class="article-card">
-          <div class="article-meta">
-            <span class="article-category">AI Readiness</span>
-            <span>Sample article card</span>
-          </div>
-          <h3>Why AI Fatigue Is Often a Workflow Problem</h3>
-          <p>
-            AI initiatives can struggle even when the technology works. The
-            underlying problem may instead be unclear workflows, weak governance,
-            poor information structures, or uncertain decision authority.
-          </p>
-          <span class="article-note">Article page will be added in Step 2.</span>
-        </article>
-
-      </section>
-
-      <section class="about-blog">
-        <h2>About this blog</h2>
-        <p>
-          PunctiliousIT focuses on the details behind business systems: the
-          constraints, rules, assumptions, decisions, responsibilities, evidence,
-          and dependencies that shape how work actually gets done.
-        </p>
-      </section>
+        © 2026 PunctiliousIT
     </div>
-  </main>
 
-  <footer>
-    <div class="container footer-row">
-      <p>© 2026 PunctiliousIT</p>
-      <p>The devil is in the details.</p>
-    </div>
-  </footer>
+</footer>
+
 </body>
 </html>
